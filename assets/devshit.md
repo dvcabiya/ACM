@@ -4,3 +4,6 @@
 - To fork this repo, click the fork button. It's not too challenging.
 -  From there, you can assign collaborators from the settings part of your repo and get to making the site!
 -  Work on your own branches (if you forget the commands, you can reference a cheatsheet on our [discord.](https://discord.gg/kH3fBdV9))
+- Pull request the changes on individual branches to merge them, then deploy your website by going through **Settings > Pages > Branch > main**
+
+If you have any questions - ask us!
