@@ -1,5 +1,5 @@
-body{
-  background-color: #005DC2;
+.index-body{
+  background-image: linear-gradient(#88C8FF,#005DC2);
   margin: 0;
   height: 97vh; 
   width: 100vw;
@@ -24,7 +24,6 @@ body{
   justify-content: center; 
   height: 92vh;
 }
-h1{
-  color: #fff;
-  font-size: 40px;
+audio{
+  margin: 10px;
 }
