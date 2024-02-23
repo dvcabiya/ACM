@@ -1,0 +1,14 @@
+body{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 30px;
+  font-size: large;
+  max-width: 800px;
+  overflow-wrap: break-word;
+}
+pre{
+  display: inline;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}

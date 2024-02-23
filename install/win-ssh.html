@@ -1,0 +1,32 @@
+<head>
+  <title>Windows SSH Install</title>
+  <link rel="icon" href="../assets/images/acm-icon.png">
+  <link rel="stylesheet" href="install.css">
+</head>
+<body>
+<div>If you don’t already have one, make a GitHub account, you’ll need to write the same email address as your github account in the indicated placeholder location.</div>
+<br>
+<div>SSH Setup on windows requires entering commands in three different apps, Git, PowerShell (start it as an administrator by right clicking it's icon and selecting "run as administrator"), and a terminal window. In which window to write commands will be indicated.</div>
+<br>
+<strong>1. In Git:</strong>
+<div>ssh-keygen -t ed25519 -C "replace-this@placeholder-example.com"</div>
+<br>
+<strong>2. In Git:</strong>
+For the next three prompts it asks you, you can just hit enter.
+<br><br>
+<strong>3. In PowerShell:</strong> 
+Get-Service -Name ssh-agent | Set-Service -StartupType Manual
+<br><br>
+<strong>4. In PowerShell:</strong>
+Start-Service ssh-agent
+<br><br>
+<strong>5. In Terminal:</strong> 
+ssh-add c:/Users/YOU/.ssh/id_ed25519
+<br><br>
+<strong>6. In Terminal:</strong>
+clip < ~/.ssh/id_ed25519.pub
+<br><br>
+<strong>8.</strong> 
+Go to github.com, click on your account, go to settings, click on “SSH and GPG keys”, then click “New SSH Key”, then do Command+F to paste in the key field (the last command copied the public key you need.) Name the key whatever you want, then click “Add SSH Key” and you’re done!
+<br><br>
+</body>

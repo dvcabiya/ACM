@@ -1,0 +1,42 @@
+<head>
+  <title>Mac SSH Install</title>
+  <link rel="icon" href="../assets/images/acm-icon.png">
+  <link rel="stylesheet" href="install.css">
+</head>
+<body>
+<div>If you don’t already have one, make a GitHub account, you’ll need to write the same email address as your github account in the indicated placeholder location. Unless otherwise indicated, you’re typing all of these commands directly into the terminal.</div>
+<br>
+<strong>1. </strong>
+<div>ssh-keygen -t ed25519 -C "replace-this@placeholder-example.com"</div>
+<br>
+<strong>2.</strong>
+For the next three prompts it asks you, you can just hit enter.
+<br><br>
+<strong>3.</strong> 
+eval "$(ssh-agent -s)"
+<br><br>
+<strong>4.</strong>
+<u>Double check that you don’t already have an ssh config file using:</u>
+open ~/.ssh/config
+<br><br>
+<u>You probably don’t have one, and if it says you don’t:</u>
+touch ~/.ssh/config
+<u>then,</u>
+open ~/.ssh/config
+<br><br>
+<strong>5.</strong> 
+<u>Copy and paste the following into the config file you just opened, then save using Command+S, and close out the file.</u>
+Host github.com
+<pre>&#9AddKeysToAgent yes</pre>
+<pre>&#9IdentityFile ~/.ssh/id_ed25519</pre>
+<br>
+<strong>6.</strong>
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+<br><br>
+<strong>7.</strong> 
+pbcopy < ~/.ssh/id_ed25519.pub
+<br><br>
+<strong>8.</strong> 
+Go to github.com, click on your account, go to settings, click on “SSH and GPG keys”, then click “New SSH Key”, then do Command+F to paste in the key field (the last command copied the public key you need.) Name the key whatever you want, then click “Add SSH Key” and you’re done!
+<br><br>
+</body>
