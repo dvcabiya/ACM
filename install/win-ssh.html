@@ -9,10 +9,10 @@
 <div>SSH Setup on windows requires entering commands in three different apps, Git Bash, PowerShell (start it as an administrator by right clicking it's icon and selecting "run as administrator"), and a terminal window. In which window to write commands will be indicated.</div>
 <br>
 <div>You can paste in PowerShell and Terminal by right clicking!</div><br>
-<strong>1. In Git:</strong>
+<strong>1. In Git Bash:</strong>
 <div>ssh-keygen -t ed25519 -C "replace-this@placeholder-example.com"</div>
 <br>
-<strong>2. In Git:</strong>
+<strong>2. In Git Bash:</strong>
 For the next three prompts it asks you, you can just hit enter.
 <br><br>
 <strong>3. In PowerShell:</strong> 
@@ -31,5 +31,8 @@ cat ~/.ssh/id_ed25519.pub | clip
 <strong>8.</strong> 
 Go to github.com, click on your account, go to settings, click on “SSH and GPG keys”, then click “New SSH Key”, then do Command+F to paste in the key field (the last command copied the public key you need.) Name the key whatever you want, then click “Add SSH Key” and you’re done!
 <br><br>
+<strong>9. In Git Bash:</strong> 
+<u>To make sure your SSH setup worked, you can check by entering:</u>
+ssh -T git@github.com
 <em>If your system says it can't verify github's authenticity, just enter "yes" as a response</em>
 </body>
