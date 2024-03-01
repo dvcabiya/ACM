@@ -9,11 +9,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: #FF0000;
+  background-color: #503bbd;
   height: 50px
 }
 .navbar a {
-  color: #ff0000;
+  color: #29e27c;
   font-size: 20px;
   padding: 10px;
 }
