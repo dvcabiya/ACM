@@ -9,7 +9,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: #503bbd;
   height: 50px
 }
 .navbar a {
